@@ -1,0 +1,71 @@
+{
+    "node_url": "https://eth-mainnet.alchemyapi.io/v2/YOUR-API-KEY",
+    "arbitrage_contract_address": "0x...",
+    "flashbots_endpoint": "https://relay.flashbots.net",
+    "private_key": "YOUR-PRIVATE-KEY",
+    
+    "dexes": {
+        "uniswap": {
+            "router": "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
+            "factory": "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f",
+            "abi_file": "uniswap_router.json"
+        },
+        "sushiswap": {
+            "router": "0xd9e1cE17f2641f24aE83637ab66a2cca9C378B9F",
+            "factory": "0xC0AEe478e3658e2610c5F7A4A2E1777cE9e4f2Ac",
+            "abi_file": "sushiswap_router.json"
+        },
+        "pancakeswap": {
+            "router": "0x10ED43C718714eb63d5aA57B78B54704E256024E",
+            "factory": "0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73",
+            "abi_file": "pancakeswap_router.json"
+        },
+        "shibaswap": {
+            "router": "0x03f7724180AA6b939894B5Ca4314783B0b36b329",
+            "factory": "0x115934131916C8b277DD010Ee02de363c09d037c",
+            "abi_file": "shibaswap_router.json"
+        },
+        "curve": {
+            "router": "0xbEbc44782C7dB0a1A60Cb6fe97d0b483032FF1C7",
+            "factory": "0xB9fC157394Af804a3578134A6585C0dc9cc990d4",
+            "abi_file": "curve_router.json"
+        },
+        "balancer": {
+            "router": "0xBA12222222228d8Ba445958a75a0704d566BF2C8",
+            "factory": "0x8E9aa87E45e92bad84D5F8DD1bff34Fb92637dE9",
+            "abi_file": "balancer_router.json"
+        }
+    },
+    
+    "token_pairs": [
+        {
+            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",  
+            "token1": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"   
+        },
+        {
+            "token0": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",  
+            "token1": "0x6B175474E89094C44Da98b954EedeAC495271d0F"   
+        }
+    ],
+    
+    "gas_price_settings": {
+        "max_gas_price_gwei": 100,
+        "priority_fee_gwei": 2
+    },
+    
+    "profit_settings": {
+        "min_profit_threshold_percent": 1.0,
+        "min_profit_usd": 50
+    },
+    
+    "monitoring_settings": {
+        "price_cache_duration_seconds": 5,
+        "check_interval_ms": 1000,
+        "gas_estimate_buffer_percent": 20
+    },
+    
+    "logging": {
+        "level": "INFO",
+        "file": "arbitrage_bot.log"
+    }
+}
